@@ -1,0 +1,97 @@
+// background-color: #d41919;
+// height : 100%;
+// width: 100%;
+.main_div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #eeeeee;
+  height: 100vh;
+}
+.signin_div {
+  padding: 15px 15px 0px 15px;
+  height: 457px;
+  width: 380px;
+  background-color: #ffffff;
+  h3 {
+    text-align: center;
+    padding: 10px 0px 15px 0px;
+  }
+  .google-btn {
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+  }
+  .signin-footer {
+    text-align: center;
+    margin-top: 40px;
+    a{
+      color: #03a9f3!important;
+      text-decoration: none;
+    }
+  }
+}
+
+.form-group {
+  margin-bottom: 18px;
+  input {
+    border: none;
+    border-bottom: 1px solid lightgray;
+    outline: none;
+    // width: 400px;
+  }
+}
+
+.form-check {
+  float: left;
+}
+.forgate_password {
+  color: #6c757d !important;
+  float: right;
+  i {
+    text-decoration: none;
+    a{
+      color: #6c757d !important;
+      text-decoration: none;
+      padding-left: 5px;
+    }
+  }
+}
+.btn1 {
+  margin-top: 21px;
+  padding: 12px 24px;
+  width: 100%;
+  border-radius: 60px;
+  font-size: 1.09375rem;
+  background-color: #03a9f3;
+  border-color: #03a9f3;
+  color: #fff;
+}
+
+.btn2 {
+  margin-top: 20px;
+  width: 100%;
+}
+.forgot-pass {
+  background-color: #ffffff;
+  height: 281px;
+  width: 387px;
+  padding: 21px 14px 0px 14px;
+  position: relative;
+  animation-name: KGF;
+  animation-duration: 1s;
+
+  @keyframes KGF {
+    0% {
+      left: 0px;
+      top: 290px;
+    }
+    100% {
+      left: 0px;
+      top: 0px;
+    }
+  }
+  p {
+    color: #6c757d !important;
+  }
+}

@@ -1,0 +1,82 @@
+.todo-card {
+  .btn-div {
+    margin-left: auto;
+    .btn {
+      background-color: green;
+      border-radius: 50%;
+      height: 40px;
+      width: 40px;
+      color: white;
+      font-size: 15px;
+    }
+  }
+
+  .abhi2{
+    position: relative;
+    height: 400px;
+    overflow: scroll;
+  }
+
+  .user-list-div {
+    display: flex;
+    padding-top: 15px;
+
+    .logo {
+      background-color: yellowgreen !important;
+      color: red !important;
+      height: 20px;
+      border-radius: 25px !important;
+      margin-top: 10px;
+      margin-left: auto;
+    }
+  }
+  .todo_list_div2 {
+    margin-left: 20px;
+    padding-bottom: 10px;
+
+    font-size: 14px;
+    width: 70%;
+
+    .todo_list_span {
+      padding-bottom: 10px;
+    }
+  }
+
+  .image-div{
+     
+      margin-left: 35px;
+
+    img{
+        border-radius: 50%;
+        height: 30px;
+        width: 30px;
+        margin-left: 10px;
+    }
+  }
+
+  .item-date{
+    padding-left: 30px;
+    font-size: 12px;
+    margin-top: 5px;
+    display: inline-block;
+  }
+
+  .logo1 {
+    background-color: orange !important;
+    color: black !important;
+    height: 20px;
+    border-radius: 25px !important;
+    margin-top: 10px;
+    margin-left: auto;
+  }
+
+  .logo3{
+        background-color: #4EA9F3;
+       
+        height: 20px;
+        border-radius: 25px !important;
+        margin-top: 10px;
+        margin-left: auto;
+  }
+  
+}

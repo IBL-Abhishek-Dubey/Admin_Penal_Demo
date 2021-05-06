@@ -1,0 +1,77 @@
+.chat-main-div{
+  position: relative;
+  height: 410px;
+  overflow: scroll;
+ }
+
+.chat-componet {
+  display: flex;
+  margin-top: 20px;
+ 
+  .chat-content {
+    margin-left: 30px;
+    margin-top: 10px;
+    width: 70%;
+    .chat {
+      color: #343a40;
+      background: #f8f9fa;
+      border-radius: 0.25rem;
+      padding: 10px;
+    }
+    .user-name {
+      font-size: 16px;
+      color: #6c757d;
+      font-family: sans-serif;
+      font-weight: 300;
+      line-height: 1.2;
+    }
+
+    .chat-time {
+      font-size: 10px;
+      color: #6c757d;
+    }
+  }
+}
+
+.chat-reply {
+  margin-top: 30px;
+  width: 230px;
+  margin-left: auto;
+  color: #fff;
+  background: #fb9678;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.reply-team {
+  text-align: right;
+  font-size: 10px;
+  color: #6c757d;
+}
+
+
+.card-border{
+  display: flex;
+  border-top: 1px solid #e9ecef!important;
+  .write-chat{
+    padding : 1.25rem;
+  }
+  .text-area-content{
+    border: none;
+  }
+
+  .send-btn-div{
+    margin-left: auto;
+    padding : 1.25rem;
+    .send-btn{
+      border-radius: 50%;
+      background-color: #418FCD;
+      color: white;
+      height: 50px;
+      width: 50px;
+      border: none;
+      font-size: 20px;
+      
+    }
+  }
+}

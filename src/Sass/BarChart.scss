@@ -1,0 +1,23 @@
+.card{
+    .card-name{
+       
+        font-size: 16px;
+    }
+
+    .main-div{
+        display: flex;
+        .left-div{
+            padding-top: 66px;
+            .text-info{
+                color:  #03a9f3!important;
+                font-size: 2.25rem;
+            }
+        }
+
+        .right-div{
+            margin-left: auto;
+            text-align: -webkit-right;
+        }
+    }
+   
+}

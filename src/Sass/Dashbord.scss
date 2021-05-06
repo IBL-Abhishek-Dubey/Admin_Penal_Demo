@@ -1,0 +1,61 @@
+$padding: 6px 0px 3px 37px;
+
+#main1 {
+  background-color: #ebeff3;
+}
+
+.card-h3-icon {
+  font-size: 1.5rem;
+}
+
+.card-icon-name {
+  color: #6c757d !important;
+  margin-top: 0;
+  margin-bottom: 0px!important;
+  font-size: 14px;
+  font-family: sans-serif;
+}
+
+.progress{
+   width: 93%;
+   margin-left: 10px;
+}
+.dash {
+  display: flex;
+  background-color: #ffffff;
+  transition: margin-left 0.5s;
+  padding: 10px 0px 10px 0px;
+  
+
+  h4 {
+   font-size: 1.125rem;
+   padding: 12px 0px 3px 33px;
+   font-family: sans-serif;
+   font-weight: 300;
+  }
+
+  .right-dash {
+    margin-left: auto;
+    padding: $padding;
+
+    .span-home-text {
+      padding-right: 10px;
+      font-size: 12px;
+    }
+
+    .span-dash-text {
+      padding-left: 10px;
+      color: orange;
+      font-weight: 500;
+    }
+    .addNew {
+      border: none;
+      outline: none;
+      background-color: #038fcd;
+      color: white;
+      border-radius: 5px;
+      padding: 5px 10px;
+      margin: 0px 11px;
+    }
+  }
+}

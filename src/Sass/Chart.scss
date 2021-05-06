@@ -1,0 +1,26 @@
+.chart-card {
+ 
+  width: 100%;
+  .chart-data {
+    display: flex;
+    height: 100%;
+    .chart-label {
+      display: flex;
+      margin-left: auto;
+
+      .iphone-color {
+        color: #01c0c8 !important;
+      
+        // font-weight: 900;
+      }
+
+      .ipad-color {
+          color : orange;
+      }
+
+      .ipod-color {
+          color : #ab8ce4;
+      }
+    }
+  }
+}

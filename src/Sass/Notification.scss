@@ -1,0 +1,49 @@
+.abhi{
+  position: relative;
+    height: 410px;
+    overflow: scroll;
+}
+
+
+.notification-div {
+  position: relative;
+  .profile-status {
+    height: 10px;
+    width: 10px;
+    background-color: #00c292;
+    border-radius: 100%;
+    position: absolute;
+    top: 7px;
+    left: 33px;
+    border: 2px solid white;
+  }
+}
+.notification-main-div {
+  display: flex;
+
+  .notification-content {
+    width: 70%;
+    margin-left: 10px;
+    .user-name {
+      margin: 5px 0 0;
+      color: #212529;
+      font-size: 16px;
+      font-weight: 300;
+      line-height: 1.2;
+    }
+
+    .mail-desc {
+      font-size: 12px;
+      display: block;
+      margin: 1px 0;
+      text-overflow: ellipsis;
+      overflow: hidden;
+      color: #212529;
+      white-space: nowrap;
+    }
+    .time {
+      font-size: 12px;
+      color: #212529;
+    }
+  }
+}

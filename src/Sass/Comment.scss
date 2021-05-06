@@ -1,0 +1,84 @@
+$border-redius: 50px;
+$hover-color: green;
+
+.comment-main-div{
+  &:hover{
+    background: #f8f9fa;
+  }
+}
+.card {
+  .comment {
+    font-size: 16px;
+    padding: 10px 0px 10px 21px;
+  }
+
+  .comment-section {
+    position: relative;
+    height: 570px;
+    overflow: scroll;
+
+    .font-medium {
+      font-size: 16px;
+    }
+  }
+  .comment-footer {
+    .icon {
+      background-color: #4ea9f3;
+      border-radius: $border-redius;
+    }
+
+    .icon1 {
+      background-color: #47c292;
+      border-radius: $border-redius;
+    }
+    .icon3 {
+      background-color: #e46a76;
+      border-radius: $border-redius;
+    }
+
+    .action-icons {
+      visibility: hidden;
+     
+      padding-top: 3px;
+      color: #6c757d;
+      .edit-icon {
+        padding-left: 7px;
+        &:hover {
+          color: $hover-color;
+        }
+      }
+
+      .check-icon{
+        padding-left: 7px;
+        &:hover{
+          color : $hover-color;
+        }
+      }
+
+      .heart-icon{
+        padding-left: 7px;
+        &:hover{
+          color : $hover-color;
+        }
+      }
+    }
+  }
+
+  .comment-text {
+    padding: 6px 15px 14px 20px;
+  }
+
+  .text-muted {
+    font-size: 15px;
+    font-family: sans-serif;
+    margin-bottom: 10px;
+  }
+}
+
+.comment-text{
+  &:hover{
+    .action-icons{
+      visibility: visible;
+    }
+  }
+}

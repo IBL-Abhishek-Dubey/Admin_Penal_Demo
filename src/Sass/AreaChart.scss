@@ -1,0 +1,24 @@
+.card{
+    .card-title{
+        font-weight: 500;
+    }
+    .chart-label{
+        display: flex;
+        margin-left: auto;
+        font-size: 13px;
+        .icon1{
+            margin-top: 6PX;
+            color: cyan;
+        }
+        .icon2{
+            margin-top: 6PX;
+            color : orange;
+        }
+        .sitea{
+            margin-top: 4px;
+        }
+        .siteb{
+            margin-top: 4px;
+        }
+    }
+}
