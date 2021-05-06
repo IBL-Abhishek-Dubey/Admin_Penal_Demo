@@ -1,7 +1,7 @@
 import React from "react";
 
 import { useState } from "react";
-import { Redirect } from "react-router-dom";
+import { NavLink, Redirect } from "react-router-dom";
 import "../Sass/addUser.scss";
 
 function AddUser(props) {
@@ -91,7 +91,16 @@ function AddUser(props) {
     <>
          <div id="main1" style={{ marginTop : "-29px"}}>
       <div className="container">
+        <div style={{ display : "flex" , marginTop : "22px"}}>
         <h2 style={{ marginTop: "30px" }}> Add User Data</h2>
+        
+         {/* <span style={{marginTop : "25px" , marginLeft : "auto"}}>
+          <NavLink to="/home"><button className="btn btn-secondary">Home</button>
+</NavLink>    
+</span>      */}
+        </div>
+        
+        
         <>
           <form>
             <div class="mb-3">

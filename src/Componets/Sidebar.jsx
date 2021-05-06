@@ -19,9 +19,9 @@ function Sidebar(props) {
     props.logOut();
   };
 
-  const logOutFail = () =>{
+  const logOutFail = () => {
     console.log("fail");
-  }
+  };
   const showDropDown = () => {
     if (istoggle === false) {
       setistoggle(true);
@@ -65,10 +65,10 @@ function Sidebar(props) {
     <>
       <div>
         <div id="mySidebar" className="sidebar">
-          <NavLink to ="/home">
-          <h3 className="project-logo-name">Admin Penal</h3>
+          <NavLink to="/home">
+            <h3 className="project-logo-name">Admin Penal</h3>
           </NavLink>
-         
+
           <div className="profile">
             <img src={props.image} alt="user-img" class="img-circle" />
           </div>
@@ -82,10 +82,15 @@ function Sidebar(props) {
 
             <div className="list" onClick={showDropDown}>
               <li className="menu-list">
+                <div className="hover-div"> 
                 <i class="fa fa-tachometer" aria-hidden="true"></i>
                 <span className="menu-name">Dashbord</span>
-                <i className="fa fa-caret-down dropdown"></i>
+             
+               
 
+                <span class="badge badge-pill dashbord-pill">4</span>
+                <i className="fa fa-caret-down dropdown dropdown-icon"></i>
+                </div>
                 <div className="sub-list">
                   {istoggle ? (
                     <ul>
@@ -105,7 +110,7 @@ function Sidebar(props) {
               <li className="menu-list">
                 <i class="fa fa-th-large"></i>
                 <span className="menu-name">App</span>
-                <i className="fa fa-caret-down dropdown"></i>
+                <i className="fa fa-caret-down dropdown  dropdown-icon"></i>
                 {istoggle1 ? (
                   <ul>
                     <li>Calender</li>
@@ -123,7 +128,7 @@ function Sidebar(props) {
               <li className="menu-list">
                 <i class="fa fa-envelope"></i>
                 <span className="menu-name">inbox</span>
-                <i className="fa fa-caret-down dropdown"></i>
+                <i className="fa fa-caret-down dropdown  dropdown-icon"></i>
                 {istoggle2 ? (
                   <ul>
                     <li>Mailox</li>
@@ -140,7 +145,8 @@ function Sidebar(props) {
               <li className="menu-list">
                 <i class="fa fa-paint-brush"></i>
                 <span className="menu-name">Ui Element</span>
-                <i className="fa fa-caret-down dropdown"></i>
+                <span class="badge badge-pill dashbord-pill2">25</span>
+                <i className="fa fa-caret-down dropdown  dropdown-icon"></i>
                 {istoggle3 ? (
                   <ul>
                     <li>Cards</li>
@@ -157,7 +163,7 @@ function Sidebar(props) {
             <p>-----FORM TABLES AND WIDGETS</p>
             <div className="list">
               <li className="menu-list">
-                <i class="fa fa-align-justify"></i>
+              <i class="fa fa-sticky-note-o" aria-hidden="true"></i>
                 <span className="menu-name">Forms</span>
               </li>
             </div>
@@ -180,7 +186,7 @@ function Sidebar(props) {
 
             <div className="list">
               <li className="menu-list">
-                <i class="far fa-file"></i>
+              <i class="fa fa-file" aria-hidden="true"></i>
                 <span className="menu-name">Page Layouts</span>
               </li>
             </div>
@@ -221,7 +227,9 @@ function Sidebar(props) {
             <div class="flip-card">
               <div class="flip-card-inner">
                 <div class="flip-card-front">
-                  <p style={{ marginTop : "92px"}}>Welcome Abhishek Dubey Profile Click to Flip</p>
+                  <p style={{ marginTop: "92px" }}>
+                    Welcome Abhishek Dubey Profile Click to Flip
+                  </p>
                 </div>
                 <div class="flip-card-back">
                   <div className="icon-name">
@@ -264,32 +272,30 @@ function Sidebar(props) {
                     <div className="icon">
                       <i class="fa fa-sign-out" aria-hidden="true"></i>
                     </div>
-                    <NavLink to="/" style={{  marginLeft : "-33px"}}>
-                     
-                        {/* <span className="card-text">logout</span> */}
-                        <GoogleLogout
-                          clientId="282374665536-la4j8iisqdkar5nsk1mu21d5lrmue08i.apps.googleusercontent.com"
-                          buttonText="Logout"
-                          onLogoutSuccess={logout}
-                          onFailure={logOutFail}
-                          render={(renderProps) => (
-                            <button
-                              onClick={renderProps.onClick}
-                              style={{
-                                border: "none",
-                                outline: "none",
-                                fontSize : "20px",
-                                backgroundColor: "transparent",
-                              }}
-                            >
-                              {/* <PowerSettingsNewOutlinedIcon
+                    <NavLink to="/" style={{ marginTop : "2px" , marginLeft : " -25px"}}>
+                      {/* <span className="card-text">logout</span> */}
+                      <GoogleLogout
+                        clientId="282374665536-la4j8iisqdkar5nsk1mu21d5lrmue08i.apps.googleusercontent.com"
+                        buttonText="Logout"
+                        onLogoutSuccess={logout}
+                        onFailure={logOutFail}
+                        render={(renderProps) => (
+                          <button
+                            onClick={renderProps.onClick}
+                            style={{
+                              border: "none",
+                              outline: "none",
+                              fontSize: "20px",
+                              backgroundColor: "transparent",
+                            }}
+                          >
+                            {/* <PowerSettingsNewOutlinedIcon
                 style={{ fontSize: "20px", fontWeight: "100" }}
               />{" "} */}
-                              Logout
-                            </button>
-                          )}
-                        ></GoogleLogout>{" "}
-                     
+                            Logout
+                          </button>
+                        )}
+                      ></GoogleLogout>{" "}
                     </NavLink>
                   </div>
 

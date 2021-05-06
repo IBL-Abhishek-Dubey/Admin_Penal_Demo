@@ -7,8 +7,12 @@ function UserData(props) {
   console.log("table data", props.data);
   return (
     <>
+    <span style={{  float : "right"}}>
+          <NavLink to="/home"><button className="btn btn-secondary">Home</button>
+</NavLink>    
+</span>  
      <div id="main1" >
-
+     
      
       <div className="container">
         <div className="add_auther_btn">

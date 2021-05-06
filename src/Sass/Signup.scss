@@ -1,0 +1,28 @@
+.main_div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #eeeeee;
+  height: 100vh;
+
+  .signup-div {
+    padding: 15px 15px 0px 15px;
+    height: 500px;
+    width: 380px;
+    background-color: #ffffff;
+
+    h3 {
+      text-align: center;
+      padding: 10px 0px 15px 0px;
+    }
+
+    .signup-footer {
+      text-align: center;
+      margin-top: 40px;
+      a {
+        color: #03a9f3 !important;
+        text-decoration: none;
+      }
+    }
+  }
+}
