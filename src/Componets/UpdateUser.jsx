@@ -92,7 +92,7 @@ function UpdateUser(props) {
   }
 
   if (isValid) {
-    return <Redirect to="/userData" />;
+    return <Redirect to="/user-list" />;
   }
 
   return (

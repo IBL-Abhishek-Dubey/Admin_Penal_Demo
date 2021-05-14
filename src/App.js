@@ -13,6 +13,7 @@ import Sidebar from "./Componets/Sidebar";
 import Navbar from "./Componets/Navbar";
 import { userData } from "./Redux/Actions/Action";
 import { connect } from "react-redux";
+import DataTable from "./Componets/DataTable";
 
 function App(props) {
   console.log("App js ", props);
@@ -35,11 +36,13 @@ function App(props) {
 
         <Route exact path="/home" component={HomeContainer} />
 
-        <Route exact path="/addUser" component={AddUserContainer} />
+        <Route exact path="/user-list/addUser" component={AddUserContainer} />
 
-        <Route exact path="/userData" component={DataContainer} />
+        <Route exact path="/user-list" component={DataContainer} />
 
-        <Route exact path="/updateuser" component={UpdateUserContainer} />
+        <Route exact path="/user-list/updateuser" component={UpdateUserContainer} />
+
+        <Route exact path="/data-table" component={DataTable} />        
       </Switch>
     </div>
   );

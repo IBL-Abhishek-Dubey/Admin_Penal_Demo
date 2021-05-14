@@ -25,7 +25,7 @@ function Dashbord() {
             <sapn className="span-home-text">Home</sapn>
             <i class="fa fa-angle-right" aria-hidden="true"></i>
             <sapn className="span-dash-text">Dashbord1</sapn>
-            <NavLink exact to="/addUser">
+            <NavLink exact to="/user-list/addUser">
               <button className="addNew">
                 <i className="fa fa-plus-circle"> &nbsp;</i>Create New
               </button>

@@ -36,7 +36,7 @@ function SignIn(props) {
             <input
               className="form-control"
               type="number"
-              placeholder="username"
+              placeholder="Username"
               onChange={handler}
             />
           </div>
@@ -45,7 +45,7 @@ function SignIn(props) {
             <input
               className="form-control"
               type="text"
-              placeholder="password"
+              placeholder="Password"
             />
           </div>
 
@@ -66,7 +66,7 @@ function SignIn(props) {
             </i>
           </div>
 
-          <NavLink to="/home">
+          <NavLink to="/home" >
             <button
               class="btn btn-block btn-lg btn-info btn-rounded btn1"
               type="submit"
@@ -86,7 +86,7 @@ function SignIn(props) {
           </div>
 
           <div className="signin-footer">
-            Already Have an account? <NavLink to="/signup">Sign in</NavLink>
+            Already Have an account? <NavLink to="/signup">Sign Up</NavLink>
           </div>
         </from>
       </div>

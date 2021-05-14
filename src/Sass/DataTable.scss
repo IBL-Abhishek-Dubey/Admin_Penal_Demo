@@ -1,0 +1,157 @@
+$font-family: sans-serif;
+
+.table-card {
+  margin: 20px 10px;
+
+  .card-title {
+    font-weight: 500;
+    font-size: 1.125rem;
+    font-family: $font-family;
+    margin-bottom: 12px;
+  }
+  .card-subtitle {
+    font-weight: 300;
+    color: #6c757d;
+    font-size: 0.875rem;
+    margin-top: -0.375rem;
+    font-family: $font-family;
+  }
+
+  .button-search-div {
+    display: flex;
+    margin-top: 40px;
+    padding: 0 15px 0 15px;
+    .button-div {
+      .div-btn {
+        padding: 5px 15px;
+        border-radius: 0.25rem;
+        background: #fb9678;
+        color: #fff;
+        outline: none;
+        font-size: 14px;
+        font-family: $font-family;
+        font-weight: 700;
+        margin-left: 5px;
+        border: 1px solid orange;
+        outline: none;
+
+        &:hover {
+          background-color: black;
+          color: white;
+        }
+
+        &:focus {
+          box-shadow: none;
+        }
+      }
+    }
+
+    .dataTables_filter {
+      display: flex;
+      margin-left: auto;
+      .search-input {
+        border: 0px;
+        border-bottom: 1px solid gray;
+
+        &:focus {
+          box-shadow: none;
+          border-bottom: 1px solid red;
+        }
+      }
+    }
+  }
+  .table-div {
+    margin-top: 10px;
+    padding: 0 15px 0 15px;
+    #customers {
+      font-family: Arial, Helvetica, sans-serif;
+      border-collapse: collapse;
+      width: 100%;
+    }
+
+    #customers td,
+    #customers th {
+      border: 1px solid #ddd;
+      padding: 16px;
+      font-size: 14px;
+      font-family: $font-family;
+      text-align: left;
+    }
+
+    #customers tr:nth-child(even) {
+      background-color: #f2f2f2;
+    }
+
+    #customers tr:hover {
+      background-color: #ddd;
+    }
+
+    #customers th {
+      padding: 16px 30px 16px 16px;
+      font-size: 14px;
+      font-family: $font-family;
+      text-align: left;
+      background-color: #ffffff;
+      color: black;
+    }
+
+    .dataTables_empty {
+      font-size: 14px;
+      padding: 16px;
+      font-family: $font-family;
+    }
+  }
+
+  .PagesNumbers {
+    list-style: none;
+    display: flex;
+    float: right;
+    margin-right: 17px;
+    margin-top: 22px;
+    margin-bottom: 0px !important;
+    padding: 0px !important;
+  }
+  .PagesNumbers li {
+    // padding: 8px 12px;
+    border: 1px solid #E9ECEF;
+    cursor: pointer;
+  }
+  .PagesNumbers li.active {
+
+    background-color: #F16338;
+    color: white;
+    font-size: 14px;
+    font-family: sans-serif;
+    padding: 8px 12px;
+    line-height: 1.2;
+
+  }
+
+  .PagesNumbers li.not_active {
+    background-color: white;
+    color: black;
+    font-size: 14px;
+    font-family: sans-serif;
+    padding: 8px 12px;
+     line-height: 1.2;
+  }
+  .PagesNumbers li button {
+    background-color: transparent;
+    border: none;
+    color: #F16338;
+    font-size: 14px;
+    cursor: pointer;
+    padding: 8px 12px;
+    font-family: sans-serif;
+  }
+
+  .PagesNumbers li.not_active:hover{
+    background-color: #E9ECEF;
+    color : #F16338;
+  }
+
+  .PagesNumbers li button:hover {
+    background-color: #E9ECEF;
+    color :#F16338;
+  }
+}

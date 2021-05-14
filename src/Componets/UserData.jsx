@@ -17,7 +17,7 @@ function UserData(props) {
       <div className="container">
         <div className="add_auther_btn">
           <h2>Users</h2>
-          <NavLink exact to="/addUser">
+          <NavLink exact to="/user-list/addUser">
             <button type="submit" class="btn btn-success">
             Add Users
             </button>
@@ -57,7 +57,7 @@ function UserData(props) {
                   <td>{value.exp} Years</td>
                   <td>{value.tech}</td>
                   <td>
-                    <NavLink to="/updateuser">
+                    <NavLink to="/user-list/updateuser">
                       <button
                         className="btn btn-info"
                         onClick={() =>

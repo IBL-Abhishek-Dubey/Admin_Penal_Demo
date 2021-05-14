@@ -1,10 +1,16 @@
 import React, { useState } from "react";
 import "../Sass/Home.scss";
 import { NavLink } from "react-router-dom";
-
+import PersonOutlineOutlinedIcon from "@material-ui/icons/PersonOutlineOutlined";
+import AccountBalanceWalletOutlinedIcon from "@material-ui/icons/AccountBalanceWalletOutlined";
+import MailOutlineOutlinedIcon from "@material-ui/icons/MailOutlineOutlined";
+import SettingsOutlinedIcon from "@material-ui/icons/SettingsOutlined";
+import PowerSettingsNewOutlinedIcon from "@material-ui/icons/PowerSettingsNewOutlined";
 import { connect } from "react-redux";
 import { logOut, userData } from "../Redux/Actions/Action";
 import { GoogleLogout } from "react-google-login";
+import ChevronRightIcon from "@material-ui/icons/ChevronRight";
+import $ from "jquery";
 
 function Sidebar(props) {
   console.log("Image Data", props);
@@ -28,6 +34,7 @@ function Sidebar(props) {
     } else {
       setistoggle(false);
     }
+    $(".icon-up").toggleClass("rotate");
   };
 
   const showAppDropDown = () => {
@@ -54,7 +61,7 @@ function Sidebar(props) {
     }
   };
 
-  const showProfileCard = () => {
+  const drop = () => {
     if (showcard === false) {
       setshowcard(true);
     } else {
@@ -73,23 +80,97 @@ function Sidebar(props) {
             <img src={props.image} alt="user-img" class="img-circle" />
           </div>
 
-          <div className="profie_name" onClick={showProfileCard}>
-            <span>{props.name}</span>
+          <div className="profie_name">
+            <div data-toggle="dropdown" onClick={drop}>
+              <span>{props.name}</span>
+              <i class="fa fa-caret-down" style={{ marginLeft : "10px"}}></i>
+            </div>
+            {showcard && (
+              <div
+                className=" dropdown-menu-right mt-2 flipInY animated1"
+                style={{ marginRight: "40px", zIndex: "9999" }}
+                id="animated-example"
+              >
+                <div className="dropdown-item" style={{ fontSize: "16px" }}>
+                  <PersonOutlineOutlinedIcon
+                    style={{ fontSize: "20px", fontWeight: "100" }}
+                  />
+                  <span style={{ marginLeft : "10px"}}>My Profile</span>
+                </div>
+                <div className="dropdown-item" style={{ fontSize: "16px" }}>
+                  <AccountBalanceWalletOutlinedIcon
+                    style={{ fontSize: "20px", fontWeight: "100" , marginLeft : "10px" }}
+                  />
+                 <span style={{ marginLeft : "10px"}}></span> My Balance
+                </div>
+                <div className="dropdown-item" style={{ fontSize: "16px" }}>
+                  <MailOutlineOutlinedIcon
+                    style={{ fontSize: "20px", fontWeight: "100" ,marginLeft : "-30px" }}
+                  />{" "}
+                 <span style={{ marginLeft : "10px"}}> Inbox</span>
+                </div>
+                <div className="dropdown-divider"></div>
+                <div className="dropdown-item" style={{ fontSize: "16px" }}>
+                  <SettingsOutlinedIcon
+                    style={{ fontSize: "20px", fontWeight: "100"  , marginLeft : "10px"}}
+                  />
+                  Account Setting
+                </div>{" "}
+                <div className="dropdown-divider"></div>
+                <NavLink
+                  to="/"
+                  // className="dropdown-item"
+                  style={{ fontSize: "16px" }}
+                >
+                  {/* <PowerSettingsNewOutlinedIcon
+          style={{ fontSize: "20px", fontWeight: "100" , display : "block"}}
+        />{" "} */}
+      <i class="fa fa-power-off" style={{ marginLeft : "-53px"}}></i>
+                  <GoogleLogout
+                    clientId="282374665536-la4j8iisqdkar5nsk1mu21d5lrmue08i.apps.googleusercontent.com"
+                    buttonText="Logout"
+                    onLogoutSuccess={logout}
+                    onFailure={logOutFail}
+                    render={(renderProps) => (
+                      <button
+                        onClick={renderProps.onClick}
+                        style={{
+                          border: "none",
+                          outline: "none",
+                          fontSize: "20px",
+                          backgroundColor: "white",
+                        }}
+                      >
+                        Logout
+                      </button>
+                    )}
+                  ></GoogleLogout>{" "}
+                </NavLink>
+              </div>
+            )}
           </div>
 
           <div className="menu">
             <p>-----PERSON</p>
 
-            <div className="list" onClick={showDropDown}>
+            <div className="list">
               <li className="menu-list">
-                <div className="hover-div"> 
-                <i class="fa fa-tachometer" aria-hidden="true"></i>
-                <span className="menu-name">Dashbord</span>
-             
-               
+                <div className="hover-div">
+                  <i class="fa fa-tachometer" aria-hidden="true"></i>
+                  <span className="menu-name" onClick={showDropDown}>
+                    Dashbord
+                  </span>
 
-                <span class="badge badge-pill dashbord-pill">4</span>
-                <i className="fa fa-caret-down dropdown dropdown-icon"></i>
+                  <span class="badge badge-pill dashbord-pill">4</span>
+                  <i
+                    className="fa fa-chevron-right icon-up"
+                    style={{
+                      float: "right",
+                      marginTop: "6px",
+                      marginRight: "19px",
+                      fontSize: "12px",
+                    }}
+                  ></i>
                 </div>
                 <div className="sub-list">
                   {istoggle ? (
@@ -110,7 +191,16 @@ function Sidebar(props) {
               <li className="menu-list">
                 <i class="fa fa-th-large"></i>
                 <span className="menu-name">App</span>
-                <i className="fa fa-caret-down dropdown  dropdown-icon"></i>
+                {/* <i className="fa fa-caret-down dropdown  dropdown-icon"></i> */}
+                <i
+                  class="fa fa-chevron-right"
+                  style={{
+                    float: "right",
+                    marginTop: "6px",
+                    marginRight: "19px",
+                    fontSize: "12px",
+                  }}
+                ></i>
                 {istoggle1 ? (
                   <ul>
                     <li>Calender</li>
@@ -128,7 +218,15 @@ function Sidebar(props) {
               <li className="menu-list">
                 <i class="fa fa-envelope"></i>
                 <span className="menu-name">inbox</span>
-                <i className="fa fa-caret-down dropdown  dropdown-icon"></i>
+                <i
+                  class="fa fa-chevron-right"
+                  style={{
+                    float: "right",
+                    marginTop: "6px",
+                    marginRight: "19px",
+                    fontSize: "12px",
+                  }}
+                ></i>
                 {istoggle2 ? (
                   <ul>
                     <li>Mailox</li>
@@ -146,7 +244,16 @@ function Sidebar(props) {
                 <i class="fa fa-paint-brush"></i>
                 <span className="menu-name">Ui Element</span>
                 <span class="badge badge-pill dashbord-pill2">25</span>
-                <i className="fa fa-caret-down dropdown  dropdown-icon"></i>
+                <i
+                  class="fa fa-chevron-right"
+                  style={{
+                    float: "right",
+                    marginTop: "6px",
+                    marginRight: "19px",
+                    fontSize: "12px",
+                    height: "6px!important",
+                  }}
+                ></i>
                 {istoggle3 ? (
                   <ul>
                     <li>Cards</li>
@@ -163,17 +270,17 @@ function Sidebar(props) {
             <p>-----FORM TABLES AND WIDGETS</p>
             <div className="list">
               <li className="menu-list">
-              <i class="fa fa-sticky-note-o" aria-hidden="true"></i>
+                <i class="fa fa-sticky-note-o" aria-hidden="true"></i>
                 <span className="menu-name">Forms</span>
               </li>
             </div>
 
-            <div className="list">
+            <NavLink exact to="/data-table" className="table-link">  <div className="list">
               <li className="menu-list">
                 <i class="fa fa-table"></i>
-                <span className="menu-name">Tables</span>
+             <span className="menu-name">Tables</span>
               </li>
-            </div>
+            </div></NavLink>
 
             <div className="list">
               <li className="menu-list">
@@ -186,7 +293,7 @@ function Sidebar(props) {
 
             <div className="list">
               <li className="menu-list">
-              <i class="fa fa-file" aria-hidden="true"></i>
+                <i class="fa fa-file" aria-hidden="true"></i>
                 <span className="menu-name">Page Layouts</span>
               </li>
             </div>
@@ -223,7 +330,8 @@ function Sidebar(props) {
           <a href="#">Services</a>
           <a href="#">Clients</a>
           <a href="#">Contact</a> */}
-          {showcard ? (
+
+          {/* {showcard ? (
             <div class="flip-card">
               <div class="flip-card-inner">
                 <div class="flip-card-front">
@@ -273,7 +381,7 @@ function Sidebar(props) {
                       <i class="fa fa-sign-out" aria-hidden="true"></i>
                     </div>
                     <NavLink to="/" style={{ marginTop : "2px" , marginLeft : " -25px"}}>
-                      {/* <span className="card-text">logout</span> */}
+                     
                       <GoogleLogout
                         clientId="282374665536-la4j8iisqdkar5nsk1mu21d5lrmue08i.apps.googleusercontent.com"
                         buttonText="Logout"
@@ -289,9 +397,7 @@ function Sidebar(props) {
                               backgroundColor: "transparent",
                             }}
                           >
-                            {/* <PowerSettingsNewOutlinedIcon
-                style={{ fontSize: "20px", fontWeight: "100" }}
-              />{" "} */}
+                      
                             Logout
                           </button>
                         )}
@@ -299,13 +405,13 @@ function Sidebar(props) {
                     </NavLink>
                   </div>
 
-                  {/* <span className="card-text">logout</span> */}
+                  
                 </div>
               </div>
             </div>
           ) : (
             ""
-          )}
+          )}  */}
         </div>
       </div>
     </>
