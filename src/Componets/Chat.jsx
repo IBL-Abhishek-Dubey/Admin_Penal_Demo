@@ -1,14 +1,16 @@
 import React from "react";
 import img1 from "./takla.jpeg";
 import "../Sass/Chat.scss";
+import {useTranslation} from 'react-i18next'
 function Chat(props) {
+  const { t } = useTranslation();
   return (
     <div className="col-md-4">
       <div className="card">
         <div className="card-body">
           <div className="d-flex no-block align-items-center">
             <div>
-              <h5 class="card-title m-b-0">Chat</h5>
+              <h5 class="card-title m-b-0">{t('chat.msg')}</h5>
             </div>
           </div>
 
@@ -26,8 +28,7 @@ function Chat(props) {
               <div className="chat-content">
                 <h5 className="user-name">Abhishek Dubey</h5>
                 <div className="chat">
-                  Lorem Ipsum is simply dummy text of the printing & type
-                  setting industry.
+                 {t('msg2.speech')}
                 </div>
 
                 <div className="chat-time">10:56 am</div>
@@ -46,19 +47,19 @@ function Chat(props) {
 
               <div className="chat-content">
                 <h5 className="user-name">Gaurang Ghadiya</h5>
-                <div className="chat">It’s Great opportunity to work.</div>
+                <div className="chat">{t('work.msg')}</div>
 
                 <div className="chat-time">10:57 am</div>
               </div>
             </div>
 
             <div className="chat-reply">
-              <div className="user-reply">I would love to join the team.</div>
+              <div className="user-reply">{t('work1.msg')}</div>
             </div>
             <div className="reply-team">10:58 am</div>
 
             <div className="chat-reply">
-              <div className="user-reply">Whats budget of the new project.</div>
+              <div className="user-reply">{t('work2.msg')}</div>
             </div>
             <div className="reply-team">10:59 am</div>
 
@@ -75,7 +76,7 @@ function Chat(props) {
               <div className="chat-content">
                 <h5 className="user-name">Gaurang Ghadiya</h5>
                 <div className="chat">
-                  Well we have good budget for the project
+                {t('work3.msg')}
                 </div>
 
                 <div className="chat-time">11:00 am</div>
@@ -85,7 +86,7 @@ function Chat(props) {
             <div className="card-border">
 
               <div className="write-chat">
-                <textarea className="text-area-content" placeholder="Type your message here"></textarea>
+                <textarea className="text-area-content" placeholder={t('work4.msg')}></textarea>
               </div>
 
               <div className="send-btn-div">

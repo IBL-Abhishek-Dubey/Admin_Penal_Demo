@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import { Redirect } from "react-router-dom";
+import {useTranslation} from "react-i18next";
 function UpdateUser(props) {
+  const { t } = useTranslation();
   console.log("update data in update page", props);
   const [Fname, setFname] = useState(
     props.data.userReducer.updateData[0].fname
@@ -98,7 +100,7 @@ function UpdateUser(props) {
   return (
     <div id="main1" >
     <div className="container">
-      <h2 style={{ marginTop: "30px" }}> Update User</h2>
+      <h2 style={{ marginTop: "30px" }}>{t('upd_user.upd')}</h2>
       <>
         {props.data.userReducer.updateData.map((val, id) => {
           return (
@@ -106,7 +108,7 @@ function UpdateUser(props) {
             <form key={id}>
               <div className="mb-3">
                 <label for="exampleInputEmail1" class="form-label">
-                  First Name
+                {t('FirstName.fn')}
                 </label>
                 <input
                   type="text"
@@ -127,7 +129,7 @@ function UpdateUser(props) {
               </div>
               <div className="mb-3">
                 <label for="exampleInputPassword1" class="form-label">
-                  Last Name
+                {t('LastName.ln')}
                 </label>
                 <input
                   type="text"
@@ -147,7 +149,7 @@ function UpdateUser(props) {
               </div>
               <div class="mb-3">
                 <label for="exampleInputPassword1" class="form-label">
-                  Age
+                {t('Age.age')}
                 </label>
                 <input
                   type="text"
@@ -164,7 +166,7 @@ function UpdateUser(props) {
 
               <div class="mb-3">
                 <label for="exampleInputPassword1" class="form-label">
-                  Salary
+                {t('Salary.slr')}
                 </label>
                 <input
                   id="salary"
@@ -209,7 +211,7 @@ function UpdateUser(props) {
               </div>
 
               <div class="form-group">
-                <label for="exampleFormControlSelect3">Technology :</label>
+                <label for="exampleFormControlSelect3">{t('Technology.tn')} :</label>
                 <select
                   class="form-control"
                   id="exampleFormControlSelect3"
@@ -235,7 +237,7 @@ function UpdateUser(props) {
 
               <div class="mb-3">
                 <label for="exampleInputPassword1" class="form-label">
-                  <b> Profile Image</b>
+                  <b> {t('profile.img')}</b>
                 </label>
                 <br />
                 <div>
@@ -268,7 +270,7 @@ function UpdateUser(props) {
                   ValidateForm(e);
                 }}
               >
-                Update
+                 {t('update.upd')}
               </button>
             </form>
            

@@ -1,7 +1,8 @@
 import React from "react";
-
+import {useTranslation} from 'react-i18next'
 import "../Sass/Comment.scss";
 function SingalComment(props) {
+  const { t } = useTranslation();
   return (
     <div class="d-flex no-block comment-row comment-main-div">
       <div class="p-2">
@@ -19,12 +20,10 @@ function SingalComment(props) {
           {props.name}
         </h5>
         <p class="m-b-10 text-muted">
-          Lorem Ipsum is simply dummy text of the printing and type setting
-          industry. Lorem Ipsum has beenorem Ipsum is simply dummy text of the
-          printing and type setting industry.
+          {t('msg.speech')}
         </p>
         <div className="comment-footer">
-          <span class="text-muted ">April 14, 2016</span>{" "}
+          <span class="text-muted ">{t('month.name')} 14, 2016</span>{" "}
           <span className={props.logo}>{props.badge_name}</span>{" "}
           <span className="action-icons">
             <i className="fa fa-edit edit-icon"></i> 

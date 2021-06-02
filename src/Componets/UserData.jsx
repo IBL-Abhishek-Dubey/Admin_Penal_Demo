@@ -1,9 +1,10 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
-
+import {useTranslation} from "react-i18next";
 
 
 function UserData(props) {
+  const { t } = useTranslation();
   console.log("table data", props.data);
   return (
     <>
@@ -16,10 +17,10 @@ function UserData(props) {
      
       <div className="container">
         <div className="add_auther_btn">
-          <h2>Users</h2>
+          <h2>{t('user1.data')}</h2>
           <NavLink exact to="/user-list/addUser">
             <button type="submit" class="btn btn-success">
-            Add Users
+           {t('user.data')}
             </button>
           </NavLink>
         </div>
@@ -28,13 +29,20 @@ function UserData(props) {
           <thead>
             <tr>
               <th scope="col">Sr.no</th>
-              <th scope="col">Profile Image</th>
-              <th scope="col">Name</th>
-              <th scope="col">Age</th>
-              <th scope="col">Salary</th>
+              <th scope="col">{t('img.data')}</th>
+              <th scope="col">{t('name1.user')}</th>
+              <th scope="col">{t('Age.age')}</th>
+              <th scope="col">{t('Salary.slr')}</th>
               <th scope="col">Expercience</th>
-              <th scope="col">Technology</th>
-              <th scope="col">Action</th>
+              <th scope="col">{t('Technology.tn')}</th>
+              <th scope="col">DOB</th>
+              <th scope="col">City</th>
+              <th scope="col">Collage Name</th>
+              <th scope="col">Degree</th>
+              <th scope="col">Final Year Project</th>
+              <th scope="col">Company Name</th>
+              <th scope="col">Mobile Number</th>
+              <th scope="col">{t('action.name')}</th>
             </tr>
           </thead>
           <tbody>
@@ -56,6 +64,13 @@ function UserData(props) {
                   <td>{value.salary}</td>
                   <td>{value.exp} Years</td>
                   <td>{value.tech}</td>
+                  <td>{value.dob}</td>
+                  <td>{value.city}</td>
+                  <td>{value.clg_name}</td>
+                  <td>{value.degree}</td>
+                  <td>{value.project}</td>
+                  <td>{value.company}</td>
+                  <td>{value.mobilenumber}</td>
                   <td>
                     <NavLink to="/user-list/updateuser">
                       <button
@@ -73,7 +88,7 @@ function UserData(props) {
                         }
                       >
                         {" "}
-                        Update{" "}
+                        {t('update.upd')}{" "}
                       </button>
                     </NavLink>
                     &nbsp;
@@ -82,7 +97,7 @@ function UserData(props) {
                       onClick={() => props.remove(index)}
                     >
                       {" "}
-                      Delete{" "}
+                      {t('delete.dlt')}{" "}
                     </button>
                   </td>
                 </tr>

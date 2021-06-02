@@ -1,5 +1,6 @@
 import React from "react";
 import "../Sass/Paichart.scss";
+import {useTranslation} from "react-i18next"
 import { PieChart, Pie, Tooltip, ResponsiveContainer } from "recharts";
 const data01 = [
   { name: "Group A", value: 400 },
@@ -8,16 +9,17 @@ const data01 = [
   
 ];
 function PaiCharts() {
+  const { t } = useTranslation();
   return (
     <div class="col-md-12 pai-div">
       <div class="card bg">
         <div class="card-body">
-          <h5 class="card-title">VISIT STATASTICS</h5>
+          <h5 class="card-title">{t('visit.statics')}</h5>
           <div class="row">
             <div class="col-6  m-t-30">
                 <div style={{ paddingTop : "66px"}}>
                 <h1 class="">$347</h1>
-              <p class="light_op_text">APRIL 2017</p>
+              <p class="light_op_text">{t('month.name')} 2017</p>
               <b class="">(150 Sales)</b>{" "}
                 </div>
             

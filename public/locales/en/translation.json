@@ -1,0 +1,323 @@
+{
+    "Save": {
+        "1": "Save me"
+    },
+    "PDF": {
+        "1": "Pdf"
+    },
+    "DataExport" :{
+        "export" : "Data Export"
+    },
+    "ExptoCopy" :{
+        "exp" : "Export data to Copy"
+    },
+    "Excel" : {
+        "xls" : "Excel"
+    },
+    "Print" : {
+        "pri" : "Print"
+    }, 
+    "Copy" : {
+        "cp" : "Copy"
+    },
+    "Search" : {
+        "srh" : "Search"
+    },
+    "FirstName" : {
+        "fn" : "FirstName"
+    },
+    "LastName" : {
+        "ln" : "LastName"
+    },
+    "Technology" : {
+        "tn" : "Technology"
+    },
+    "Age" : {
+        "age" : "Age"
+    },
+    "Salary" : {
+        "slr" : "Salary"
+    },
+    "profile" :{
+        "img" : "Upload Profile Image"
+    },
+    "Previous" : {
+        "pre" : "Previous"
+    },
+    "Next" : {
+        "nxt" : "Next"
+    },
+    "Notfound" :{
+        "not" : "No matching records found"
+    },
+    "Adminpenal" : {
+        "admin" : "Admin Penal"
+    },
+    "Person" : {
+        "person" : "PERSON"
+    },
+    "dashbord" : {
+        "dash" : "Dashbord"
+    },
+    "minimal" : {
+        "drop1" : "Minimal"
+    },
+     "anaiytical" : {
+        "drop2" : "Analytical"
+    },
+     "modern" : {
+        "drop3" : "Modern"
+    }, 
+    "demo" : {
+        "drop4" : "Demographical"
+    }, 
+    "App" : {
+        "app" : "App"
+    }, 
+    "calander" : {
+        "drop1" : "Calander"
+    }
+    , 
+    "chatapp" : {
+        "drop2" : "Chat App"
+    }
+    , 
+    "st" : {
+        "drop3" : "Support Ticket"
+    }
+    , 
+    "cg" : {
+        "drop4" : "Contact Grid"
+    }
+    , 
+    "inbox" : {
+        "ib" : "Inbox"
+    }
+    , 
+    "mailbox" : {
+        "drop1" : "Mailbox"
+    }
+    , 
+    "mailbox_detail" : {
+        "drop2" : "Mailbox Detail"
+    }, 
+    "compose_mail" : {
+        "drop3" : "Compose Mail"
+    }
+    , 
+    "ui_element" : {
+        "ui" : "UI Element"
+    }
+    , 
+    "form" : {
+        "fm" : "Forms"
+    }
+    , 
+    "Tables" : {
+        "tb" : "Tables"
+    }
+    , 
+    "widgest" : {
+        "app" : "Widgets"
+    }
+    , 
+    "extra_compo" : {
+        "extra" : "EXTRA COMPONENTS"
+    }
+    , 
+    "page" : {
+        "layout" : "Page Layouts"
+    }
+    , 
+    "Sample" : {
+        "pages" : "Sample Pages"
+    }
+    , 
+    "charts" : {
+        "ch" : "Charts"
+    },
+    "icon" : {
+        "icons" : "Icons"
+    } , 
+    "maps" : {
+        "mp" : "Maps"
+    },
+    "mynew" : {
+        "clients" : "MYNEW CLIENTS"
+    },
+    "new" : {
+        "projects" : "NEW PROJECTS"
+    },
+    "invoice_obj" : {
+        "invoices" : "NEW INVOICES"
+    },
+    "allproject" : {
+        "project" : "All PROJECTS"
+    },
+    "year" : {
+        "sales" : "YEARLY SALES"
+    },
+    "city" : {
+        "name" : "AHMEDABAD"
+    },
+    "country" : {
+        "name" : "INDIA"
+    },
+    "sunny" : {
+        "day" : "SUNNY DAY"
+    },
+    "month" : {
+        "name" : "April"
+    },
+    "dailog" :{
+        "speech" : "My Acting blown Your Mind and you also laugh at the moment"
+    },
+    "actor" : {
+        "act" : "Actor"
+    },
+    "comment" : {
+        "cmt" : "Recent Comments"
+    }
+    ,
+    "pending" : {
+        "pending_key" : "pending"
+    },
+    "approved" :{
+        "approve_key" : "Approved"
+    },
+    "rejected" :{
+        "reject_key" : "Rejected"
+    },
+    "sales" :{
+        "overview" : "Sales Overview"
+    },
+    "statment" :{
+        "line" : "Check the monthly sales"
+    },
+    "januvary" :{
+        "1" : "Januvary"
+    },
+    "febuary" :{
+        "2" : "Febuary"
+    },
+    "march" :{
+        "3" : "March"
+    },
+    "table" :{
+        "heading" : "Report for this month"
+    },
+    "name" :{
+        "1" : "Name"
+    },
+    "status" :{
+        "2" : "Status"
+    },
+    "price" :{
+        "3" : "Price"
+    },
+    "sale" :{
+        "4" : "Sale"
+    },
+    "extended" :{
+        "5" : "extended"
+    },
+    "tax" :{
+        "6" : "tax"
+    },
+    "sale_diff" :{
+        "7" : "SALES DIFFERENCE"
+    },
+    "visit" :{
+        "statics" : "VISIT STATASTICS"
+    },
+    "todo" :{
+        "list" : "TO DO LIST"
+    },
+    "noti" :{
+        "msg" : "YOU HAVE 5 NEW MESSAGES"
+    },
+    "chat" :{
+        "msg" : "Chat"
+    },
+    "today" :{
+        "day" : "Today"
+    },
+    "week" :{
+        "day" : "Week"
+    },
+    "Yesterday" :{
+        "day" : "Yesterday"
+    } ,
+    "msg" : {
+        "speech" : "Lorem Ipsum is simply dummy text of the printing and type setting industry. Lorem Ipsum has beenorem Ipsum is simply dummy text of the printing and type setting industry."
+    }, 
+    "msg2" : {
+        "speech" : "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been" 
+    },
+    "msg3" :{
+        "speech" : "Lorem Ipsum is simply dummy text of the printing"
+    },
+    "msg4" :{
+        "speech" : "Give Purchase report to"
+    },
+    "gmmsg" : {
+        "gm" : "Good Morning"
+    },
+    "code_msg" : {
+        "code" : "Good Morning Buddy code code ...."
+    },
+    "gm" : {
+        "msg" : "Good Morning Friend"
+    },
+    "work" :{
+        "msg" : "It’s Great opportunity to work."
+    },
+    "work1" : {
+        "msg" : "I would love to join the team."
+    },
+    "work2" : {
+        "msg" : "Whats budget of the new project."
+    },
+    "work3" : {
+        "msg" : "Well we have good budget for the project"
+    },
+    "work4" : {
+        "msg" : "Type your message here"
+    },
+    "add" :{
+        "data" : "Add User Data"
+    },
+    "user" :{
+        "data" : "Add User"
+    },
+    "name1" :{
+        "user" :"Name"
+    },
+    "action" : {
+        "name" : "Action"
+    },
+    "img" :{
+        "data" : "Profile Image"
+    },
+    "user1" :{
+        "data" : "Users"
+    },
+    "update" :{
+        "upd" : "Update"
+    },
+    "delete" : {
+        "dlt" : "Delete"
+    },
+    "upd_user" : {
+        "upd" : "Update User"
+    },
+    "create" : {
+        "new" : "Create New"
+    },
+    "Home" : {
+        "home" : "Home"
+    }
+    
+    
+    
+}

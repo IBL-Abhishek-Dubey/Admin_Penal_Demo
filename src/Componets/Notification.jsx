@@ -6,22 +6,23 @@ import img3 from "./img1.jpeg";
 import img4 from "./girl.jpeg";
 import "../Sass/Notification.scss";
 import SingleNotification from "./SingleNotification";
+import {useTranslation} from "react-i18next"
 function Notification() {
+  const { t } = useTranslation();
   return (
     <div className="col-md-4">
       <div className="card">
         <div className="card-body">
           <div className="d-flex no-block align-items-center">
             <div>
-              <h5 class="card-title">YOU HAVE 5 NEW MESSAGES</h5>
+              <h5 class="card-title">{t('noti.msg')}</h5>
             </div>
           </div>
         <div className="abhi">
         <SingleNotification
             image={img1}
             name="Noor Ahamed Natali"
-            notification=" Lorem Ipsum is simply dummy text of the printing and type
-            setting industry Lorem Ipsum has been"
+            notification={t('msg2.speech')}
             time ="9:30 AM"
           />
           <hr />
@@ -29,7 +30,7 @@ function Notification() {
           <SingleNotification
             image={yash}
             name="Yash"
-            notification="Good Morning"
+            notification={t('gmmsg.gm')}
             time ="10:30 AM"
           />
           <hr />
@@ -37,14 +38,14 @@ function Notification() {
           <SingleNotification
             image={img2}
             name="Bhautik Domadiya"
-            notification="Good Mornign Buddy"
+            notification={t('gm.msg')}
             time ="12:30 AM"
           />
           <hr/>
            <SingleNotification
             image={img3}
             name="Ghaurang Ghadiya"
-            notification="Good Morning Code Code Code...."
+            notification={t('code_msg.code')}
             time ="12:30 AM"
           /> <hr/>
            <SingleNotification

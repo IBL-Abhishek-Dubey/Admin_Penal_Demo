@@ -1,4 +1,5 @@
 import React from "react";
+import {useTranslation} from 'react-i18next';
 import "../Sass/AreaChart.scss";
 import {
   AreaChart,
@@ -54,12 +55,13 @@ const data = [
   },
 ];
 function AreaCharts() {
+  const { t } = useTranslation();
   return (
     <div className="col-sm-12 col-md-8 col-lr-8">
       <div className="card">
         <div className="card-body">
           <div class="d-flex m-b-40 align-items-center no-block">
-            <h5 class="card-title ">SALES DIFFERENCE</h5>
+            <h5 class="card-title ">{t('sale_diff.7')}</h5>
             {/* <div class="ml-auto">
                 <ul class="list-inline font-12">
                   <li>

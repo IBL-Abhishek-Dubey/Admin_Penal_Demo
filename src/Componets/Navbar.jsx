@@ -1,14 +1,16 @@
 import React, { useState } from "react";
 import "../Sass/Navbar.scss";
+import {useTranslation} from "react-i18next"
 
 function Navbar() {
   const [toggle, settoggle] = useState(true);
+  const { t } = useTranslation();
   function openNav() {
     if (toggle === true) {
       settoggle(false);
-      document.getElementById("mySidebar").style.width = "250px";
-      document.getElementById("main").style.marginLeft = "250px";
-      document.getElementById("main1").style.marginLeft = "250px";
+      document.getElementById("mySidebar").style.width = "296px";
+      document.getElementById("main").style.marginLeft = "275px";
+      document.getElementById("main1").style.marginLeft = "275px";
     } else {
       settoggle(true);
       document.getElementById("mySidebar").style.width = "0px";
@@ -26,7 +28,7 @@ function Navbar() {
           <input
             type="text"
             class="search-cantrol"
-            placeholder="Search &amp; enter"
+            placeholder={t('Search.srh')}  ß
           />
         </form>
 

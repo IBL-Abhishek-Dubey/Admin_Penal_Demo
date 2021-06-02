@@ -100,6 +100,33 @@ $font-family: sans-serif;
       padding: 16px;
       font-family: $font-family;
     }
+
+    #customers .up_arrow{
+      padding-left: 10px;
+      color : #BDBEBF
+       
+    }
+ 
+
+    #customers .up_arrow_lastname{
+      padding-left: 15px;
+      color : #BDBEBF
+    }
+    #customers .up_arrow_tech{
+      padding-left: 10px;
+      color : #BDBEBF
+    }
+    #customers .up_arrow_age{
+      padding-left: 10px;
+      color : #BDBEBF
+    }
+    #customers .up_arrow_salary{
+      padding-left: 10px;
+      color : #BDBEBF
+    }
+    #first_name_again , #last_name_icon2 , #tech_icon_2 , #age_icon_2 , #salary_icon_2{
+      color : #BDBEBF
+    }
   }
 
   .PagesNumbers {
@@ -154,4 +181,5 @@ $font-family: sans-serif;
     background-color: #E9ECEF;
     color :#F16338;
   }
+
 }

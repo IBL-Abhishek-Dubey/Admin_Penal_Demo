@@ -3,8 +3,10 @@ import React from "react";
 import { useState } from "react";
 import { NavLink, Redirect } from "react-router-dom";
 import "../Sass/addUser.scss";
+import {useTranslation} from "react-i18next";
 
 function AddUser(props) {
+  const { t } = useTranslation();
   const [Fname, setFname] = useState("");
   const [Lname, setLname] = useState("");
   const [Age, setAge] = useState("");
@@ -12,6 +14,13 @@ function AddUser(props) {
   const [Exprience, setExprience] = useState("");
   const [Technology, setTechnology] = useState("");
   const [profile, setprofile] = useState("");
+  const [dob, setDob] = useState("");
+  const [city, setCity] = useState("");
+  const [clgname, setCollage] = useState("");
+  const [degree, setDegree] = useState("");
+  const [project, setProject] = useState("");
+  const [company, setCompany] = useState("");
+  const [mobilenumber, setMobileNumber] = useState("");
   const [FnameErr, setFnameErr] = useState(false);
   const [LnameErr, setLnameErr] = useState(false);
   const [AgeErr, setAgeErr] = useState(false);
@@ -22,6 +31,7 @@ function AddUser(props) {
   const [isValid, setisValid] = useState(false);
 
   function ValidateForm(e) {
+   
     let fnameValue = document.getElementById("fname").value;
     let lnameValue = document.getElementById("lname").value;
     let ageValue = document.getElementById("age").value;
@@ -70,6 +80,13 @@ function AddUser(props) {
       setExprience("");
       setTechnology("");
       setprofile("");
+      setDob("");
+      setCity("");
+      setCollage("")
+      setDegree("")
+      setProject("")
+      setCompany("")
+      setMobileNumber("")
       props.addData({
         id: Math.random(),
         fname: Fname,
@@ -79,6 +96,13 @@ function AddUser(props) {
         tech : Technology,
         salary: Salary,
         profile: profile,
+        dob : dob,
+        city : city,
+        clg_name : clgname,
+        degree : degree,
+        project : project,
+        company : company,
+        mobilenumber : mobilenumber
       });
     }
   }
@@ -92,7 +116,7 @@ function AddUser(props) {
          <div id="main1" style={{ marginTop : "-29px"}}>
       <div className="container">
         <div style={{ display : "flex" , marginTop : "22px"}}>
-        <h2 style={{ marginTop: "30px" }}> Add User Data</h2>
+        <h2 style={{ marginTop: "30px" }}>{t('add.data')}</h2>
         
          {/* <span style={{marginTop : "25px" , marginLeft : "auto"}}>
           <NavLink to="/home"><button className="btn btn-secondary">Home</button>
@@ -105,7 +129,7 @@ function AddUser(props) {
           <form>
             <div class="mb-3">
               <label for="exampleInputEmail1" class="form-label">
-                First Name
+               {t('FirstName.fn')}
               </label>
               <input
                 id="fname"
@@ -125,7 +149,7 @@ function AddUser(props) {
             </div>
             <div class="mb-3">
               <label for="exampleInputPassword1" class="form-label">
-                Last Name
+              {t('LastName.ln')}
               </label>
               <input
                 id="lname"
@@ -141,7 +165,7 @@ function AddUser(props) {
             </div>
             <div class="mb-3">
               <label for="exampleInputPassword1" class="form-label">
-                Age
+              {t('Age.age')}
               </label>
               <input
                 id="age"
@@ -158,7 +182,7 @@ function AddUser(props) {
 
             <div class="mb-3">
               <label for="exampleInputPassword1" class="form-label">
-                Salary
+              {t('Salary.slr')}
               </label>
               <input
                 id="salary"
@@ -199,7 +223,7 @@ function AddUser(props) {
             </div>
 
             <div class="form-group">
-              <label for="exampleFormControlSelect3">Technology :</label>
+              <label for="exampleFormControlSelect3">{t('Technology.tn')} :</label>
               <select
                 class="form-control"
                 id="exampleFormControlSelect3"
@@ -224,7 +248,7 @@ function AddUser(props) {
             </div>
             <div class="mb-3">
               <label for="exampleInputPassword1" class="form-label">
-                <b>Upload Profile Image</b>
+                <b>{t('profile.img')}</b>
               </label>
               <br />
               <div>
@@ -254,6 +278,124 @@ function AddUser(props) {
                 ""
               )}
             </div>
+            <div class="mb-3">
+              <label for="exampleInputPassword1" class="form-label">
+                Date of bhirth
+              </label>
+              <input
+                id="dob"
+                type="date"
+                class="form-control"
+                value={dob}
+                onChange={(e) => {
+                  setDob(e.target.value);
+               
+                }}
+              />
+            
+            </div>
+
+            <div class="mb-3">
+              <label for="exampleInputPassword1" class="form-label">
+                City
+              </label>
+              <input
+                id="city"
+                type="text"
+                class="form-control"
+                value={city}
+                onChange={(e) => {
+                  setCity(e.target.value);
+               
+                }}
+              />
+            
+            </div>
+            <div class="mb-3">
+              <label for="exampleInputPassword1" class="form-label">
+               Collage Name
+              </label>
+              <input
+                id="clgname"
+                type="text"
+                class="form-control"
+                value={clgname}
+                onChange={(e) => {
+                  setCollage(e.target.value);
+               
+                }}
+              />
+            
+            </div>
+
+            <div class="mb-3">
+              <label for="exampleInputPassword1" class="form-label">
+             Degree
+              </label>
+              <input
+                id="clgname"
+                type="text"
+                class="form-control"
+                value={degree}
+                onChange={(e) => {
+                  setDegree(e.target.value);
+               
+                }}
+              />
+            
+            </div>
+
+
+            <div class="mb-3">
+              <label for="exampleInputPassword1" class="form-label">
+            Final Year Project
+              </label>
+              <input
+                id="clgname"
+                type="text"
+                class="form-control"
+                value={project}
+                onChange={(e) => {
+                  setProject(e.target.value);
+               
+                }}
+              />
+            
+            </div>
+
+            <div class="mb-3">
+              <label for="exampleInputPassword1" class="form-label">
+          Company Name
+              </label>
+              <input
+                id="cmpname"
+                type="text"
+                class="form-control"
+                value={company}
+                onChange={(e) => {
+                 setCompany(e.target.value);
+               
+                }}
+              />
+            
+            </div>
+
+            <div class="mb-3">
+              <label for="exampleInputPassword1" class="form-label">
+                Mobile Number
+              </label>
+              <input
+                id="cmpname"
+                type="text"
+                class="form-control"
+                value={mobilenumber}
+                onChange={(e) => {
+                 setMobileNumber(e.target.value);
+               
+                }}
+              />
+            
+            </div>
 
             <button
               type="reset"
@@ -262,7 +404,7 @@ function AddUser(props) {
                 ValidateForm(e);
               }}
             >
-              Save
+             {t('Save.1')}
             </button>
           </form>
         </>

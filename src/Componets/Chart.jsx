@@ -1,8 +1,9 @@
 import React from "react";
 import "../Sass/Chart.scss";
 import {Line} from "react-chartjs-2"
+import {useTranslation} from "react-i18next"
 function Chart() {
-
+  const { t } = useTranslation();
     const data = {
         labels : [2010 , 2011 ,2012 , 2013 , 2014 , 2015 ,2016],
         datasets :[
@@ -29,7 +30,7 @@ function Chart() {
       <div className="card chart-card">
         <div className="card-body">
           <div className="chart-data">
-              <h6 style={{fontWeight : "500"}}>YEARLY SALES</h6>
+              <h6 style={{fontWeight : "500"}}>{t('year.sales')}</h6>
 
               <div className="chart-label">
                   <i class="fa fa-circle iphone-color"></i> &nbsp;

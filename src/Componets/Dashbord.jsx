@@ -14,20 +14,22 @@ import Table from "./Table";
 import ToDo from "./ToDo";
 import Weather from "./Weather";
 import { NavLink } from "react-router-dom";
+import {useTranslation} from "react-i18next"
 function Dashbord() {
+  const { t } = useTranslation();
   return (
     <>
       <div id="main1">
         <div className="dash">
           {" "}
-          <h4>Dashbord 1</h4>
+          <h4>{t('dashbord.dash')} 1</h4>
           <div className="right-dash">
-            <sapn className="span-home-text">Home</sapn>
+            <sapn className="span-home-text">{t('Home.home')}</sapn>
             <i class="fa fa-angle-right" aria-hidden="true"></i>
-            <sapn className="span-dash-text">Dashbord1</sapn>
+            <sapn className="span-dash-text">{t('dashbord.dash')}1</sapn>
             <NavLink exact to="/user-list/addUser">
               <button className="addNew">
-                <i className="fa fa-plus-circle"> &nbsp;</i>Create New
+                <i className="fa fa-plus-circle"> &nbsp;</i>{t('create.new')}
               </button>
             </NavLink>
           </div>
@@ -40,7 +42,7 @@ function Dashbord() {
           <Card
             fontColor="#fb9678"
             number="23"
-            title="MYNEW CLIENTS"
+            title={t('mynew.clients')}
             icon="fa fa-desktop"
           
           />
@@ -48,19 +50,19 @@ function Dashbord() {
             fontColor="#01c0c8"
             number="169"
             icon="fa fa-sticky-note-o"
-            title="NEW PROJECTS"
+            title={t('new.projects')}
           />
 
           <Card
             fontColor="#ab8ce4"
             icon="fa fa-file-text-o"
-            title="NEW INVOICES"
+            title={t('invoice_obj.invoices')}
             number="157"
           />
           <Card
             icon="fa fa-suitcase"
             fontColor="#00c292"
-            title="ALL PROJECTS"
+            title={t('allproject.project')}
             number="431"
           />
         </div>

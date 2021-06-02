@@ -1,5 +1,6 @@
 import React from "react";
 import "../Sass/BarChart.scss";
+import {useTranslation} from "react-i18next"
 import { BarChart, Bar, ResponsiveContainer } from "recharts";
 
 const data = [
@@ -47,11 +48,12 @@ const data = [
   },
 ];
 function BarCharts() {
+  const { t } = useTranslation();
   return (
    
       <div className="card">
         <div className="card-body">
-          <h5 class="card-name">SALES DIFFERENCE</h5>
+          <h5 class="card-name">{t('sale_diff.7')}</h5>
 
           <div className="main-div">
             <div className="left-div">

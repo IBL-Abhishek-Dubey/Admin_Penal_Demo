@@ -5,18 +5,27 @@ import ForgotPass from "./Componets/GoogleAuth/ForgotPass";
 import HomeContainer from "./Container/HomeContainer";
 import SignInContainer from "./Container/SignInContainer";
 import AddUserContainer from "./Container/AddUserContainer";
-import UserData from "./Componets/UserData";
+
 import DataContainer from "./Container/DataContainer";
 import UpdateUserContainer from "./Container/UpdateUserContainer";
-import UpdateUser from "./Componets/UpdateUser";
+
 import Sidebar from "./Componets/Sidebar";
 import Navbar from "./Componets/Navbar";
 import { userData } from "./Redux/Actions/Action";
 import { connect } from "react-redux";
 import DataTable from "./Componets/DataTable";
+import Footer from "./Componets/Footer";
+
+import i18next from 'i18next';
+import ExcelComponent from "./Componets/ExcelComponent";
+import ExcelData from "./Componets/ExcelData";
 
 function App(props) {
   console.log("App js ", props);
+  function handleClick(e) {
+    i18next.changeLanguage(e.target.value)
+    console.log("afther click language change" ,e.target.value);
+  }
   return (
     <div className="App">
       {props.data.userReducer.isLogined && (
@@ -40,10 +49,26 @@ function App(props) {
 
         <Route exact path="/user-list" component={DataContainer} />
 
-        <Route exact path="/user-list/updateuser" component={UpdateUserContainer} />
+        <Route
+          exact
+          path="/user-list/updateuser"
+          component={UpdateUserContainer}
+        />
 
-        <Route exact path="/data-table" component={DataTable} />        
+        <Route exact path="/data-table" component={DataTable} />
+
+        <Route exact path="/excel-com" component={ExcelData} />
       </Switch>
+      <Footer passFunction={handleClick}/>
+      {/* <div style={{ display : "flex" , justifyContent :"center"}}>
+        Change Langauge &nbsp;
+        <button type="button" className="btn btn-danger">
+          English
+        </button> &nbsp;&nbsp;
+        <button type="button" class="btn btn-warning">
+          Chaiana
+        </button>
+      </div> */}
     </div>
   );
 }

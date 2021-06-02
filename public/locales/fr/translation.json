@@ -1,0 +1,338 @@
+{
+    "Save": {
+        "1": 
+        "Sauvegarder"
+    },
+    "PDF": {
+        "1": "PDF"
+    },
+    "DataExport" :{
+        "export" : "Export de données"
+    },
+    "ExptoCopy" :{
+        "exp" : "Exporter les données à copier"
+    },
+    "Excel" : {
+        "xls" : "Exceller"
+    },
+    "Print" : {
+        "pri" : "Imprimer"
+    },
+    "Copy" : {
+        "cp" : "Copie"
+    },
+    "Search" : {
+        "srh" : "Rechercher"
+    },
+    "FirstName" : {
+        "fn" : "Prénom"
+    },
+    "LastName" : {
+        "ln" : "Nom de famille"
+    },
+    "Technology" : {
+        "tn" : "La technologie"
+    },
+    "Age" : {
+        "age" : "Âge"
+    },
+    "Salary" : {
+        "slr" : "Un salaire"
+    },
+    "profile" :{
+        "img" : "Importer une image de profil"
+    },
+    "Previous" : {
+        "pre" : "Précédente"
+    },
+    "Next" : {
+        "nxt" : "Suivante"
+    },
+    "Notfound" :{
+        "not" : "Aucun enregistrements correspondants trouvés"
+    },
+    "Adminpenal" : {
+        "admin" : "panneau d'administration"
+    },
+    "Person" : {
+        "person" : "PERSONNE"
+    },
+    "dashbord" : {
+        "dash" : "Tableau de bord"
+    },
+    "minimal" : {
+        "drop1" : "Minimale"
+    },
+     "anaiytical" : {
+        "drop2" : "Analytique"
+    },
+     "modern" : {
+        "drop3" : "Moderne"
+    }, 
+    "demo" : {
+        "drop4" : "Démographique"
+    }, 
+    "App" : {
+        "app" : "Appli"
+    }, 
+    "calander" : {
+        "drop1" : "Calendrier"
+    }
+    , 
+    "chatapp" : {
+        "drop2" : "Application de chat"
+    }
+    , 
+    "st" : {
+        "drop3" : "Ticket de support"
+    }
+    , 
+    "cg" : {
+        "drop4" : "Grille de contact"
+    }
+    , 
+    "inbox" : {
+        "ib" : "boîte de réception"
+    }
+    , 
+    "mailbox" : {
+        "drop1" : "Boites aux lettres"
+    }
+    , 
+    "mailbox_detail" : {
+        "drop2" : "Boites aux lettres"
+    }, 
+    "compose_mail" : {
+        "drop3" : "Écrire un email"
+    }
+    , 
+    "ui_element" : {
+        "ui" : "Élément Ui"
+    }
+    , 
+    "form" : {
+        "fm" : "Formes"
+    }
+    , 
+    "Tables" : {
+        "tb" : "les tables"
+    }
+    , 
+    "widgest" : {
+        "app" : "Widgets"
+    }
+    , 
+    "extra_compo" : {
+        "extra" : "Composants supplémentaires"
+    }
+    , 
+    "page" : {
+        "layout" : "Mise en page"
+    }
+    , 
+    "Sample" : {
+        "pages" : "Exemples de pages"
+    }
+    , 
+    "charts" : {
+        "ch" : "Graphiques"
+    },
+    "icon" : {
+        "icons" : "Icônes"
+    }, 
+    "maps" : {
+        "mp" : "Plans"
+    },
+    "mynew" : {
+        "clients" : "MYNEW CLIENTS"
+    },
+    "new" : {
+        "projects" : "DE NOUVEAUX PROJETS"
+    },
+    "invoice_obj" : {
+        "invoices" : "NOUVELLES FACTURES"
+    },
+    "allproject" : {
+        "project" : "Tous les PROJETS"
+    },
+    "year" : {
+        "sales" : "YEARLY SALES"
+    },
+    "city" : {
+        "name" : "AHMEDABAD"
+    },
+    "country" : {
+        "name" : "INDE"
+    },
+    "sunny" : {
+        "day" : "JOURS ENSOLEILLÉS"
+    },
+    "month" : {
+        "name" : "avril"
+    },
+    "dailog" : {
+        "speech" : "Mon jeu a soufflé votre esprit et vous riez aussi en ce moment"
+    },
+    "actor" : {
+        "act" : "Actrice"
+    },
+    "comment" : {
+        "cmt" : "Commentaires récents"
+    }
+    ,
+    "pending" : {
+        "pending_key" : "en attendant"
+    },
+    "approved" :{
+        "approve_key" : "Approuvée"
+    },
+    "rejected" :{
+        "reject_key" : "Rejetée"
+    },
+    "sales" :{
+        "overview" : "Aperçu des ventes"
+    },
+    "statment" :{
+        "line" : "Vérifiez les ventes mensuelles"
+    },
+    "januvary" :{
+        "1" : "janvier"
+    },
+    "febuary" :{
+        "2" : "février"
+    },
+    "march" :{
+        "3" : "Mars"
+    },
+    "table" :{
+        "heading" : "Rapport pour ce mois"
+    },
+    "name" :{
+        "1" : "Mars"
+    },
+    "status" :{
+        "2" : "STATUT"
+    },
+    "price" :{
+        "3" : "LE PRIX"
+    },
+    "sale" :{
+        "4" : "vendre"
+    },
+    "extended" :{
+        "5" : "élargie"
+    },
+    "sale_diff" :{
+        "7" : "DIFFÉRENCE DE VENTE"
+    },
+    "visit" :{
+        "statics" : "VISITEZ LES STATASTIQUES"
+    },
+    "todo" :{
+        "list" : "LISTE DE CHOSES À FAIRE"
+    },
+    "noti" :{
+        "msg" : "VOUS AVEZ 5 NOUVEAUX MESSAGES"
+    },
+    "chat" :{
+        "msg" : "discuter"
+    },
+    "today" :{
+        "day" : "Aujourd'hui"
+    },
+    "week" :{
+        "day" : "Semaine"
+    },
+    "Yesterday" :{
+        "day" : "Hier"
+    },
+    "msg" : {
+        "speech" : "Lorem Ipsum est simplement un texte factice de l'industrie de l'impression et de la mise en caractères. Lorem Ipsum a étéorem Ipsum est simplement un texte factice de l'industrie de l'impression et de la mise en caractères."
+    }, 
+    "msg2" : {
+        "speech" : "Lorem Ipsum est simplement un texte factice de l'impression et de la composition industrie. Lorem Ipsum a été" 
+    },
+    "msg3" : {
+        "speech" : "Lorem Ipsum est simplement un faux texte de l'impression"
+    },
+    "msg4" :{
+        "speech" : "Donner un rapport d'achat à"
+    },
+    "gmmsg" : {
+        "gm" : "Bonjour"
+    },
+    "code_msg" : {
+        "code" : "Code de code de bonjour ...."
+    },
+    "gm" : {
+        "msg" : "Bon copain de Mornign"
+    },
+    "work" :{
+        "msg" : "C’est une excellente occasion de travailler."
+    },
+    "work1" : {
+        "msg" : "J'adorerais rejoindre l'équipe."
+    },
+    "work2" : {
+        "msg" : "Quel est le budget du nouveau projet."
+    },
+    "work3" : {
+        "msg" : "Eh bien, nous avons un bon budget pour le projet"
+    },
+    "work4" :{
+        "msg" : "Tapez votre message ici"
+    },
+    "add" :{
+        "data" : "Ajouter des données utilisateur"
+    },
+    "user" :{
+        "data" : "Ajouter des utilisateurs"
+    },
+    "name1" :{
+        "user" :"Nom"
+    },
+    "action" : {
+        "name" : "action"
+    },
+    "img" :{
+        "data" : "Image de profil"
+    },
+    "user1" :{
+        "data" : "Utilisatrices"
+    },
+    "update" :{
+        "upd" : "Mettre à jour"
+    },
+    "delete" : {
+        "dlt" : "Effacer"
+    },
+    "upd_user" : {
+        "upd" : "Mettre à jour l'utilisateur"
+    },
+    "create" : {
+        "new" : "Créer un nouveau"
+    },
+    "Home" : {
+        "home" : "Domicile"
+    }
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+}

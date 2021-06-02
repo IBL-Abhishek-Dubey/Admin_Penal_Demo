@@ -1,8 +1,10 @@
 import React from "react";
 import { Carousel } from "react-bootstrap";
 import img1 from "./img1.jpeg";
+import { useTranslation } from "react-i18next";
 
 function Slider() {
+  const { t } = useTranslation();
   return (
 
       //   <div
@@ -152,7 +154,7 @@ function Slider() {
                 fontWeight : "400"
               }}
             >
-              My Acting blown Your Mind and you also  laugh at the moment
+             {t('dailog.speech')}
             </span>
 
             <div style={{ display: "flex" , marginTop : "80px"}}>
@@ -164,7 +166,7 @@ function Slider() {
               />
               
                 <div style={{ marginTop : "5px"}}><span style={{ color: "white" , marginLeft : "10px" }}>Govinda</span>
-                <p style={{ color: "white" ,  marginLeft : "10px" }}>Actor</p></div>
+                <p style={{ color: "white" ,  marginLeft : "10px" }}>{t('actor.act')}</p></div>
             </div>
 
            
@@ -179,7 +181,7 @@ function Slider() {
                 fontWeight : "400"
               }}
             >
-              My Acting blown Your Mind and you also  laugh at the moment
+            {t('dailog.speech')}
             </span>
 
             <div style={{ display: "flex" , marginTop : "80px"}}>
@@ -191,7 +193,7 @@ function Slider() {
               />
               
                 <div style={{ marginTop : "5px"}}><span style={{ color: "white" , marginLeft : "10px" }}>Govinda</span>
-                <p style={{ color: "white" ,  marginLeft : "10px" }}>Actor</p></div>
+                <p style={{ color: "white" ,  marginLeft : "10px" }}>{t('actor.act')}</p></div>
             </div>
 
           </Carousel.Item>
@@ -205,7 +207,7 @@ function Slider() {
                 fontWeight : "400"
               }}
             >
-              My Acting blown Your Mind and you also laugh at the moment
+              {t('dailog.speech')}
             </span>
 
             <div style={{ display: "flex" , marginTop : "80px"}}>
@@ -217,7 +219,7 @@ function Slider() {
               />
               
                 <div style={{ marginTop : "5px"}}><span style={{ color: "white" , marginLeft : "10px" }}>Govinda</span>
-                <p style={{ color: "white" ,  marginLeft : "10px" }}>Actor</p></div>
+                <p style={{ color: "white" ,  marginLeft : "10px" }}>{t('actor.act')}</p></div>
             </div>
 
           </Carousel.Item>

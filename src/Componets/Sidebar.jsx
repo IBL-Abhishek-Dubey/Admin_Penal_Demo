@@ -10,7 +10,9 @@ import { connect } from "react-redux";
 import { logOut, userData } from "../Redux/Actions/Action";
 import { GoogleLogout } from "react-google-login";
 import ChevronRightIcon from "@material-ui/icons/ChevronRight";
+import {useTranslation} from "react-i18next"
 import $ from "jquery";
+
 
 function Sidebar(props) {
   console.log("Image Data", props);
@@ -20,6 +22,8 @@ function Sidebar(props) {
   const [istoggle3, setistoggle3] = useState(false);
   const [showcard, setshowcard] = useState(false);
 
+
+  const { t } = useTranslation();
   const logout = () => {
     console.log("logout sucessfull");
     props.logOut();
@@ -73,7 +77,7 @@ function Sidebar(props) {
       <div>
         <div id="mySidebar" className="sidebar">
           <NavLink to="/home">
-            <h3 className="project-logo-name">Admin Penal</h3>
+            <h3 className="project-logo-name">{t('Adminpenal.admin')}</h3>
           </NavLink>
 
           <div className="profile">
@@ -151,14 +155,14 @@ function Sidebar(props) {
           </div>
 
           <div className="menu">
-            <p>-----PERSON</p>
+            <p>-----{t('Person.person')}</p>
 
             <div className="list">
               <li className="menu-list">
                 <div className="hover-div">
                   <i class="fa fa-tachometer" aria-hidden="true"></i>
                   <span className="menu-name" onClick={showDropDown}>
-                    Dashbord
+                  {t('dashbord.dash')}
                   </span>
 
                   <span class="badge badge-pill dashbord-pill">4</span>
@@ -175,10 +179,10 @@ function Sidebar(props) {
                 <div className="sub-list">
                   {istoggle ? (
                     <ul>
-                      <li>Minimal</li>
-                      <li>Analytical</li>
-                      <li>Demographical</li>
-                      <li>Modern</li>
+                      <li> {t('minimal.drop1')}</li>
+                      <li> {t('anaiytical.drop2')}l</li>
+                      <li> {t('demo.drop4')}</li>
+                      <li> {t('modern.drop3')}</li>
                     </ul>
                   ) : (
                     " "
@@ -190,7 +194,7 @@ function Sidebar(props) {
             <div className="list" onClick={showAppDropDown}>
               <li className="menu-list">
                 <i class="fa fa-th-large"></i>
-                <span className="menu-name">App</span>
+                <span className="menu-name">{t('App.app')}</span>
                 {/* <i className="fa fa-caret-down dropdown  dropdown-icon"></i> */}
                 <i
                   class="fa fa-chevron-right"
@@ -203,10 +207,10 @@ function Sidebar(props) {
                 ></i>
                 {istoggle1 ? (
                   <ul>
-                    <li>Calender</li>
-                    <li>Chat app</li>
-                    <li>Support Ticket</li>
-                    <li>Contact Grid</li>
+                    <li> {t('calander.drop1')}</li>
+                    <li> {t('chatapp.drop2')}</li>
+                    <li> {t('st.drop3')}</li>
+                    <li> {t('cg.drop4')}</li>
                   </ul>
                 ) : (
                   " "
@@ -217,7 +221,7 @@ function Sidebar(props) {
             <div className="list" onClick={showInboxDropDown}>
               <li className="menu-list">
                 <i class="fa fa-envelope"></i>
-                <span className="menu-name">inbox</span>
+                <span className="menu-name"> {t('inbox.ib')}</span>
                 <i
                   class="fa fa-chevron-right"
                   style={{
@@ -229,9 +233,9 @@ function Sidebar(props) {
                 ></i>
                 {istoggle2 ? (
                   <ul>
-                    <li>Mailox</li>
-                    <li>Mailbox Detail</li>
-                    <li>Compose Mail</li>
+                    <li> {t('mailbox.drop1')}</li>
+                    <li> {t('mailbox_detail.drop2')}</li>
+                    <li> {t('compose_mail.drop3')}</li>
                   </ul>
                 ) : (
                   " "
@@ -242,7 +246,7 @@ function Sidebar(props) {
             <div className="list" onClick={showUiDropDown}>
               <li className="menu-list">
                 <i class="fa fa-paint-brush"></i>
-                <span className="menu-name">Ui Element</span>
+                <span className="menu-name"> {t('ui_element.ui')}</span>
                 <span class="badge badge-pill dashbord-pill2">25</span>
                 <i
                   class="fa fa-chevron-right"
@@ -267,62 +271,74 @@ function Sidebar(props) {
               </li>
             </div>
 
-            <p>-----FORM TABLES AND WIDGETS</p>
+            <p>----- {t('form.fm')}  {t('Tables.tb')} AND {t('widgest.app')}</p>
+           
             <div className="list">
+           
               <li className="menu-list">
                 <i class="fa fa-sticky-note-o" aria-hidden="true"></i>
-                <span className="menu-name">Forms</span>
+                <span className="menu-name">{t('form.fm')}</span>
               </li>
+            
             </div>
+           
+            
 
             <NavLink exact to="/data-table" className="table-link">  <div className="list">
               <li className="menu-list">
                 <i class="fa fa-table"></i>
-             <span className="menu-name">Tables</span>
+             <span className="menu-name">{t('Tables.tb')}</span>
+              </li>
+            </div></NavLink>
+
+            <NavLink exact to="/excel-com" className="table-link">  <div className="list">
+              <li className="menu-list">
+                <i class="fa fa-table"></i>
+             <span className="menu-name">{t('Tables.tb')}</span>
               </li>
             </div></NavLink>
 
             <div className="list">
               <li className="menu-list">
                 <i class="fa fa-cog" aria-hidden="true"></i>
-                <span className="menu-name">Widgets</span>
+                <span className="menu-name">{t('widgest.app')}</span>
               </li>
             </div>
 
-            <p>-----EXTRA COMPONENTS</p>
+            <p>-----{t('extra_compo.extra')}</p>
 
             <div className="list">
               <li className="menu-list">
                 <i class="fa fa-file" aria-hidden="true"></i>
-                <span className="menu-name">Page Layouts</span>
+                <span className="menu-name">{t('page.layout')}</span>
               </li>
             </div>
 
             <div className="list">
               <li className="menu-list">
                 <i class="fa fa-table"></i>
-                <span className="menu-name">Sample Pages</span>
+                <span className="menu-name">{t('Sample.pages')}</span>
               </li>
             </div>
 
             <div className="list">
               <li className="menu-list">
                 <i class="fa fa-line-chart" aria-hidden="true"></i>
-                <span className="menu-name">Charts</span>
+                <span className="menu-name">{t('charts.ch')}</span>
               </li>
             </div>
 
             <div className="list">
               <li className="menu-list">
                 <i class="fa fa-font-awesome" aria-hidden="true"></i>
-                <span className="menu-name">Icons</span>
+                <span className="menu-name">{t('icon.icons')}</span>
               </li>
             </div>
 
             <div className="list">
               <li className="menu-list">
                 <i class="fa fa-map-marker" aria-hidden="true"></i>
-                <span className="menu-name">Maps</span>
+                <span className="menu-name">{t('maps.mp')}</span>
               </li>
             </div>
           </div>
